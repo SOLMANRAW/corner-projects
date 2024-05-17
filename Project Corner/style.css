@@ -7,12 +7,12 @@ background-attachment: fixed;
 
 }
 
-.phone-table {
-  display: none;
+.pc-table {
+  display: table;
 }
 
-.b1-1, .b2-2, .b3-3 {
-  display: none;
+.b1, .b2, .b3 {
+  display: inline;
 
 }
 
