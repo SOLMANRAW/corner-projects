@@ -99,6 +99,7 @@ input[type = "text"] {
 
 .phone-button {
   display: block !important;
+   display: inline !important;
 }
 
 
