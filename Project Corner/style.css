@@ -98,7 +98,7 @@ input[type = "text"] {
 }
 
 .phone-button {
-  display: contents;
+  display: block;
 }
 
 
