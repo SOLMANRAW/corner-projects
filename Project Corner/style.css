@@ -311,7 +311,7 @@ button:hover .text111{
 
 h1 {
     text-align: center;
-    color: white;
+    color: rgb(145, 61, 61);
     -webkit-animation: glow 1s  infinite alternate;
 -moz-animation: glow 1s  infinite alternate;
 animation: glow 1s  infinite alternate;
