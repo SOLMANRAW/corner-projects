@@ -97,6 +97,10 @@ input[type = "text"] {
   display: none !important;
 }
 
+.phone-button {
+  display: contents;
+}
+
 
 
 
