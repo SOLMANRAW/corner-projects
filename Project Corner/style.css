@@ -7,14 +7,10 @@ background-attachment: fixed;
 
 }
 
-.pc-table {
+.phone-table {
   display: none;
 }
 
-.b1-1, .b2-2, .b3-3 {
-  display: none;
-
-}
 
 /*Query start*/
 @media screen and (max-width: 414px) {
@@ -102,17 +98,11 @@ input[type = "text"] {
   display: none !important;
 }
 
-.b1, .b2, .b3 {
-  display: none !important;
-}
 
 .phone-table {
   display: table !important;
 }
 
-.b1-1, .b2-2, .b3-3 {
-  display: inline !important;
-}
 
 
 
@@ -325,7 +315,7 @@ text-shadow: 0 0 20px #fff, 0 0 30px #f91706, 0 0 40px #3a0bf5, 0 0 50px #f33207
 
 
 /*telegram button*/
-button.b1, button.b1-1 {
+button.b1 {
     position: relative;
     width: 165px;
     height: 50px;
@@ -391,7 +381,7 @@ button.b1, button.b1-1 {
     transform: scale(1.03);
   }
   /*instagram button*/
-  button.b2, button.b2-2 {
+  button.b2 {
     position: relative;
     width: 165px;
     height: 50px;
@@ -460,7 +450,7 @@ button.b1, button.b1-1 {
   }
   
   /*facebook button*/
-  button.b3, button.b3-3 {
+  button.b3 {
     position: relative;
     width: 168px;
     height: 50px;
