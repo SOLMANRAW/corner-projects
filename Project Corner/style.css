@@ -8,11 +8,11 @@ background-attachment: fixed;
 }
 
 .pc-table {
-  display: table;
+  display: none;
 }
 
-.b1, .b2, .b3 {
-  display: inline;
+.b1-1, .b2-2, .b3-3 {
+  display: none;
 
 }
 
