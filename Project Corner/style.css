@@ -89,6 +89,10 @@ input[type = "text"] {
   cursor: pointer;
 }
 
+.b1, .b2, .b3 {
+  display: none;
+}
+
 /*telegram button*/
 button.b1 {
   position: relative;
