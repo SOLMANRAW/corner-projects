@@ -1,2 +1,3 @@
-# corner-projects
-created by Mr. SxClanst aka SolMcCock
+# corner-projects 
+created by SxClanS aka SolMcCock 
+todoteamlist.netlify.app/project-corner/  -website
