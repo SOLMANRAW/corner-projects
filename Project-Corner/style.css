@@ -1,0 +1,547 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-image: url("bgpic2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+.phone-table {
+  display: none;
+}
+
+
+/*Query start*/
+@media screen and (max-width: 414px) {
+
+  .container {
+    max-width: 500px !important;
+    min-height: 600px !important;
+    margin: 50px auto;
+    padding: 20px;
+    border: 3px solid #076585;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.contact {
+  max-width: 500px !important;
+  padding-bottom: 20px;
+  backdrop-filter: blur(10px);
+     margin-bottom: 0px;
+     margin-left: 0%;
+     margin-right: 0%;
+     border-radius: 10px;
+     border: 3px solid #076585;
+ }
+
+input[type = "text"] {
+  width: 180px !important;
+  height: 10px !important;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  align-items: center;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.268);
+  backdrop-filter: blur(30px);
+  color: white;
+  border: 2px solid white;
+  outline: none;
+  
+}
+
+#reminderInput {
+  width: 160px !important;
+  padding: 3px !important;
+  align-items: center;
+  font-size: 5px !important;
+  border-radius: 50px;
+  background-color: rgba(17, 15, 15, 0.051) !important;
+  color: rgb(249, 247, 247) !important;
+
+}
+
+#add-button {
+  padding: 6px 10px !important;
+  background-color: #3635351a !important;
+  color: #fff;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.done-button {
+  background-color: #0ed328;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 7px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.pc-table {
+  display: none !important;
+}
+
+
+.phone-table {
+  display: table !important;
+}
+
+
+
+
+}
+
+/*Query end*/
+
+.container {
+    max-width: 900px;
+    min-height: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 3px solid #076585;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    -webkit-animation: glow 1s  infinite alternate;
+-moz-animation: glow 1s  infinite alternate;
+animation: glow 1s  infinite alternate;
+
+}
+
+@keyframes glow{
+  from{
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073,;
+  }
+  to{
+text-shadow: 0 0 20px #86fbff, 0 0 30px #54d7ff, 0 0 40px #3c1ac4, 0 0 50px #5771d8, 0 0 60px #9b51f5, 0 0 70px #d36dfb, 0 0 80px #ff26c2;
+  }
+}
+
+#alert{
+    text-align: center;
+    color: red;
+    margin-top: 5px;
+}
+
+input[type = "text"] {
+    width: 70%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    align-items: center;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.268);
+    backdrop-filter: blur(30px);
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    
+}
+
+button {
+    padding: 20px 30px;
+    background-color: #363535;
+    color: #fff;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #7c7c7ce3;
+}
+button:active {
+    background-color: #ffffffe3;
+  color: black;
+}
+
+ul {
+    margin-bottom: 10px;
+    list-style: none; 
+}
+
+li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 7px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    background-color: white;
+    color: red;
+}
+
+.done-button {
+    background-color: #0ed328;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.done-button:hover{
+    background-color: white;
+    color: green;
+}
+
+#reminderInput {
+    width: 300px;
+    padding: 5px;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.315);
+    color: rgb(30, 30, 30);
+
+}
+
+.a1{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.a1:hover{
+    -webkit-animation: glow1 1s  infinite alternate;
+-moz-animation: glow1 1s  infinite alternate;
+animation: glow1 1s  infinite alternate;
+-webkit-animation: round1 3s  infinite normal;
+-moz-animation: round1 3s  infinite normal;
+animation: round1 3s  infinite normal;
+}
+@keyframes  glow1{
+    from{
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073,;
+    }
+    to{
+text-shadow: 0 0 20px #fff, 0 0 30px #f91706, 0 0 40px #3a0bf5, 0 0 50px #f33207, 0 0 60px #f91e05b6, 0 0 70px #0536f8, 0 0 80px #f0f80c;
+    }
+}
+
+.title-bar{
+    display: flex;
+    align-items: flex-end;
+    background-color: transparent;
+    justify-content: space-around;
+    border-bottom: 10px solid black;
+    padding: 20px  black;
+    text-decoration: none;
+    
+}
+.title-bar:hover{
+    border-bottom: transparent;
+}
+
+.title-bar > div{
+    display: inline;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 20px 300px black;
+    
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.task-item {
+    display: block; /* Display tasks vertically */
+    transition: transform 0.5s ease; /* Include opacity in the transition */
+    border-bottom: 1px solid #ccc; /* Add a horizontal line between tasks */
+    padding-bottom: 10px; /* Add space below each task */
+    margin-bottom: 10px; /* Add space between tasks */
+    transition-delay: 0.1s;
+}
+
+.move-left {
+    transform: translateX(-100%);
+   
+}
+
+.move-right {
+    transform: translateX(100%);
+    
+}
+
+
+
+/*telegram button*/
+button.b1 {
+    position: relative;
+    width: 165px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgb(105, 180, 249);
+    border: 1px #08c solid;
+    overflow: hidden;
+  }
+  
+  .text1 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 22%;
+    top: -55%;
+    color: #fffdfd;
+    text-align: center;
+    
+  }
+  
+  .text2 {
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(25, 141, 212);
+    text-decoration: none;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background-color: #08c;
+  }
+  
+  
+  
+  button:hover .text2 {
+    transform: translateX(151px);
+    transition: transform 0.6s;
+  }
+  button:hover .text1{
+    transform: translateX() ;
+    font-size: 0px;
+  }
+  button:active {
+    transform: scale(1.03);
+  }
+  /*instagram button*/
+  button.b2 {
+    position: relative;
+    width: 165px;
+    height: 50px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    
+    border: 2px orangered solid;
+    overflow: hidden;
+  }
+  
+  .text11 {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: -29px;
+    top: 30%;
+    color: #fffdfd;
+  }
+  
+  .text22 {
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(90, 3, 87);
+    text-decoration: none;
+  }
+  
+  .icon2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon2::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    ;
+  }
+  
+  
+  
+  button:hover .text22 {
+    transform: translateX(151px);
+    transition: transform 0.6s;
+  }
+  
+  button:active {
+    transform: scale(1.03);
+  }
+  
+  button:hover .text11{
+    transform: translateX() ;
+    font-size: 0px;
+  }
+  
+  /*facebook button*/
+  button.b3 {
+    position: relative;
+    width: 168px;
+    height: 50px;
+    border-radius: 30px;
+    background-color:  rgb(51, 56, 151);
+    border: 1px #3a5ba2 solid;
+    overflow: hidden;
+    margin-right: 5px;
+  }
+  
+  .text111 {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: -15%;
+    margin-top: -10px;
+    color: #fffdfd;
+  }
+  
+  .text222 {
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(63, 6, 250);
+    text-decoration: none;
+  }
+  
+  .icon3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon3::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background-color: #3a5ba2;
+  }
+  
+  
+  button:hover .text222 {
+    transform: translateX(151px);
+    transition: transform 0.6s;
+  }
+  
+  button:active {
+    transform: scale(1.03);
+  }
+  
+  button:hover .text111{
+    transform: translateX() ;
+    font-size: 0px;
+  }
+
+ 
+
+  .contact {
+ padding-bottom: 20px;
+ backdrop-filter: blur(10px);
+    margin-bottom: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 10px;
+    border: 3px solid #076585;
+}
+
+a, .p1 {
+  text-decoration: none;
+  color: #ccc;
+  text-align: left;
+  font-size: 20px;
+ 
+}
+
+td {
+  padding: 5px;
+}
+
+#remainderTime {
+color: white;
+}
+
+
