@@ -76,6 +76,38 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function load() {
-    localStorage.getItem("taskContent");
-}
+//local storage
+
+var storedTasks = localStorage.getItem("tasks");
+var tasks = storedTasks ? JSON.parse(storedTasks) : [];
+tasks.push({
+    taskText: taskText,
+    reminderTime: reminderTime,
+    currentTime: currentTime
+});
+localStorage.setItem("tasks", JSON.stringify(tasks));
+
+
+var storedTasks = localStorage.getItem("tasks");
+        var tasks = storedTasks ? JSON.parse(storedTasks) : [];
+        var taskIndex = tasks.findIndex(function (task) {
+            return task.taskText === taskItem.querySelector('span:nth-child(2)').innerText;
+        });
+        if (taskIndex !== -1) {
+            tasks.splice(taskIndex, 1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+    ;
+
+
+var storedTasks = localStorage.getItem("tasks");
+if (storedTasks) {
+    var tasks = JSON.parse(storedTasks);
+    tasks.forEach(function (task) {
+        var taskList = document.getElementById("taskList");
+        var newTask = document.createElement("li");
+        newTask.className = 'task-item';
+        newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + task.currentTime + "</span> - <span style = 'font-size: 12px;'>" + task.taskText + "</span> <span class='reminder-time' style='font-size: 12px; color: white;'> (Reminder: " + task.reminderTime + ")</span> <button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
+        taskList.appendChild(newTask);
+    });
+};
