@@ -78,16 +78,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //local storage
 
-document.addEventListener("DOMContentLoaded", function() {
-    var storedTasks = localStorage.getItem("tasks");
-    if (storedTasks) {
-        var tasks = JSON.parse(storedTasks);
-        var taskList = document.getElementById("taskList");
-        tasks.forEach(function (task) {
-            var newTask = document.createElement("li");
-            newTask.className = 'task-item';
-            newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + task.currentTime + "</span> - <span style='font-size: 12px;'>" + task.taskText + "</span> <span class='reminder-time' style='font-size: 12px; color: white;'> (Reminder: " + task.reminderTime + ")</span> <button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
-            taskList.appendChild(newTask);
-        });
-    }
-});
