@@ -2,9 +2,6 @@ function addTask(){
     var taskInput = document.getElementById("taskInput"); 
     var taskText = taskInput.value.trim(); 
     var reminderTime = document.getElementById("reminderInput").value;
-    var taskContent = document.getElementById("taskInput").value;
-
-    localStorage.setItem("taskContent", "taskList");
 
     if (taskText === ""){
         taskInput.style.borderColor="red";
@@ -31,20 +28,36 @@ function addTask(){
         taskList.appendChild(newTask);
     }
 
-    
-    if (reminderTime) {
-        var reminderDate = new Date(reminderTime);
-        var now = new Date();
-        var timeout = reminderDate.getTime() - now.getTime();
-        if (timeout > 0) {
-            setTimeout(function() {
-                alert("Reminder: " + taskText);
-            }, timeout);
-        }
-    }
+    // Save tasks to local storage
+    saveTasks();
 
     taskInput.value = "";
     document.getElementById("reminderInput").value = ""; 
+}
+
+function saveTasks() {
+    var tasks = [];
+    document.querySelectorAll('#taskList .task-item').forEach(function(task) {
+        var taskInfo = {
+            time: task.querySelector('.time').textContent,
+            text: task.querySelector('span:nth-child(2)').textContent,
+            reminder: task.querySelector('.reminder-time').textContent
+        };
+        tasks.push(taskInfo);
+    });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasks() {
+    var tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks) {
+        tasks.forEach(function(task) {
+            var newTask = document.createElement("li");
+            newTask.className = 'task-item'; 
+            newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + task.time + "</span> - <span style = 'font-size: 12px;'>" + task.text + "</span> " + task.reminder + "<button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
+            document.getElementById("taskList").appendChild(newTask);
+        });
+    }
 }
 
 function delete_task(element){
@@ -74,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
             addTask();
         }
     });
+    loadTasks(); // Load tasks from local storage
 });
 
 //local storage
