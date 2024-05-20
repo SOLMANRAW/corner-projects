@@ -60,6 +60,18 @@ function loadTasks() {
     }
 }
 
+function loadTasksForHistory() {
+    var tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks) {
+        tasks.forEach(function(task) {
+            var newTask = document.createElement("li");
+            newTask.className = 'task-item'; 
+            newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + task.time + "</span> - <span style = 'font-size: 12px;'>" + task.text + "</span> " + task.reminder;
+            document.getElementById("taskList").appendChild(newTask);
+        });
+    }
+}
+
 function delete_task(element){
     var taskItem = element.parentElement;
     if (element.classList.contains('done-button')) {
@@ -78,6 +90,19 @@ function delete_task(element){
     });
 }
 
+function clearHistory() {
+    // Clear local storage
+    localStorage.removeItem('tasks');
+
+    // Clear the display
+    const taskList = document.getElementById('taskList');
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+
+    // Optionally, display a message or handle the empty state
+    console.log("History cleared.");
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     var taskInput = document.getElementById("taskInput");
@@ -87,8 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
             addTask();
         }
     });
-    loadTasks(); // Load tasks from local storage
+    // loadTasks(); // Comment out or remove this line
 });
-
-//local storage
 

@@ -11,6 +11,25 @@ background-attachment: fixed;
   display: none;
 }
 
+.clock, .back {
+  width: 30px;
+  height: 30px;
+}
+
+.clear {
+  width: 50px;
+  height: 50px;
+  background-color: #4e526551;
+  color: white;
+  position: absolute;
+    top: 10px;  
+    right: 20px;
+    text-align: center;
+    font-size: 15px; 
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 3px;
+}
 
 /*Query start*/
 @media screen and (max-width: 414px) {
@@ -161,7 +180,7 @@ input[type = "text"] {
     
 }
 
-button {
+#add-button {
     padding: 20px 30px;
     background-color: #363535;
     color: #fff;
@@ -172,10 +191,10 @@ button {
     transition: all 0.3s;
 }
 
-button:hover {
+#add-button:hover {
     background-color: #7c7c7ce3;
 }
-button:active {
+#add-button:active {
     background-color: #ffffffe3;
   color: black;
 }

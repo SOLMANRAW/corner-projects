@@ -2,10 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task History</title>
+    <link rel="stylesheet" href="/corner-projects/Project-Corner/style.css">
+    <link rel="shortcut icon" href="/corner-projects/Project-Corner/icon.jpg" type="image/x-icon">
+    <script src="Project-Corner/script.js"></script>
 </head>
 <body>
+   
+
+    <div class="container">
+       <a href="index.html"><img src="/corner-projects/Project-Corner/back.png" alt="" class="back"></a>
+  
+          <h1>History</h1>
+          
+          <button class="clear" onclick="clearHistory()">Clear</button>
+          <ul id="taskList"></ul>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadTasksForHistory();
+        });
+    </script>
+      </div>
 </body>
+</html>
 </html>
