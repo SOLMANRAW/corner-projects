@@ -17,7 +17,7 @@ background-attachment: fixed;
 
   .container {
     max-width: 500px !important;
-    min-height: 600px !important;
+    min-height: 550px !important;
     margin: 50px auto;
     padding: 20px;
     border: 3px solid #076585;
