@@ -20,7 +20,7 @@ function addTask(){
     var taskList = document.getElementById("taskList");
     var newTask = document.createElement("li");
     newTask.className = 'task-item'; 
-    newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + currentTime + "</span> - <span style = 'font-size: 12px;'>" + taskText + "</span> <span class='reminder-time' style='font-size: 12px; color: white;'> (Reminder: " + reminderTime + ")</span> <button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
+    newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + currentTime + "</span> - <span style = 'font-size: 18px;'>" + taskText + "</span> <span class='reminder-time' style='font-size: 18px; color: white;'> (Reminder: " + reminderTime + ")</span> <button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
 
     if (taskList.firstChild) {
         taskList.insertBefore(newTask, taskList.firstChild);
@@ -54,7 +54,7 @@ function loadTasks() {
         tasks.forEach(function(task) {
             var newTask = document.createElement("li");
             newTask.className = 'task-item'; 
-            newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + task.time + "</span> - <span style = 'font-size: 12px;'>" + task.text + "</span> " + task.reminder + "<button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
+            newTask.innerHTML = "<span class='time' style='font-size: 18px;'>" + task.time + "</span> - <span style = 'font-size: 18px;'>" + task.text + "</span> " + task.reminder + "<button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
             document.getElementById("taskList").appendChild(newTask);
         });
     }
@@ -66,7 +66,7 @@ function loadTasksForHistory() {
         tasks.forEach(function(task) {
             var newTask = document.createElement("li");
             newTask.className = 'task-item'; 
-            newTask.innerHTML = "<span class='time' style='font-size: 15px;'>" + task.time + "</span> - <span style = 'font-size: 12px;'>" + task.text + "</span> " + task.reminder;
+            newTask.innerHTML = "<span class='time' style='font-size: 18px;'>" + task.time + "</span> - <span style = 'font-size: 18px;'>" + task.text + "</span> " + task.reminder;
             document.getElementById("taskList").appendChild(newTask);
         });
     }
