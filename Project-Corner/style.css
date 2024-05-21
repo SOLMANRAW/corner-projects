@@ -16,6 +16,10 @@ background-attachment: fixed;
   height: 30px;
 }
 
+.clock:hover, .back:hover {
+  transform: scale(1.3);
+}
+
 .clear {
   width: 50px;
   height: 50px;
@@ -29,6 +33,16 @@ background-attachment: fixed;
     border: 3px solid white;
     border-radius: 10px;
     padding: 3px;
+}
+
+.clear:hover{
+  background-color: #7c7c7ce3;
+  transform: scale(1.1);
+}
+
+.clear:active {
+  background-color: #ffffffe3;
+  color: black;
 }
 
 /*Query start*/
@@ -193,6 +207,7 @@ input[type = "text"] {
 
 #add-button:hover {
     background-color: #7c7c7ce3;
+    transform: scale(1.1);
 }
 #add-button:active {
     background-color: #ffffffe3;
