@@ -115,3 +115,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // loadTasks(); // Comment out or remove this line
 });
 
+let docTitle = document.title;
+window.addEventListener("blur", () =>{
+    document.title = "Please come back 🥺";
+})
+window.addEventListener("focus", () =>{
+    document.title = docTitle;
+})
