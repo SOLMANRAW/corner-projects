@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let docTitle = document.title;
 window.addEventListener("blur", () =>{
-    document.title = "Please come back Siii🥺❤️";
+    document.title = "Siii🥺❤️";
 })
 window.addEventListener("focus", () =>{
     document.title = docTitle;
