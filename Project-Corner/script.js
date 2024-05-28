@@ -73,7 +73,6 @@ function loadTasksForHistory() {
     
 }
 
-
 function delete_task(element){
     var taskItem = element.parentElement;
     if (element.classList.contains('done-button')) {
