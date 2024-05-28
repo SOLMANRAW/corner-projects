@@ -58,17 +58,6 @@ function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-function loadTasks() {
-    var tasks = JSON.parse(localStorage.getItem('tasks'));
-    if (tasks) {
-        tasks.forEach(function(task) {
-            var newTask = document.createElement("li");
-            newTask.className = 'task-item'; 
-            newTask.innerHTML = "<span class='time' style='font-size: 18px;'>" + task.time + "</span> - <span style = 'font-size: 18px;'>" + task.text + "</span> " + task.reminder + "<button class='done-button' onclick='delete_task(this)'>Done</button> <button class='delete-button' onclick='delete_task(this)'>Abort</button>";
-            document.getElementById("taskList").appendChild(newTask);
-        });
-    }
-}
 
 function loadTasksForHistory() {
     var tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -79,8 +68,13 @@ function loadTasksForHistory() {
             newTask.innerHTML = "<span class='time' style='font-size: 18px;'>" + task.time + "</span> - <span style = 'font-size: 18px;'>" + task.text + "</span> " + task.reminder;
             document.getElementById("taskList").appendChild(newTask);
         });
+        
     }
+    
 }
+document.addEventListener("DOMContentLoaded", function() {
+    loadTasksForHistory();
+});
 
 function delete_task(element){
     var taskItem = element.parentElement;
@@ -90,7 +84,7 @@ function delete_task(element){
         taskItem.innerText = "";
 
     }
-     else if (element.classList.contains('delete-button')) {
+    else if (element.classList.contains('delete-button')) {
         taskItem.classList.add('move-right');
         taskItem.style.backgroundColor = 'rgb(250, 8, 8)';
         taskItem.innerText = "";
@@ -101,17 +95,18 @@ function delete_task(element){
 }
 
 function clearHistory() {
-    // Clear local storage
     localStorage.removeItem('tasks');
 
-    // Clear the display
     const taskList = document.getElementById('taskList');
     while (taskList.firstChild) {
         taskList.removeChild(taskList.firstChild);
     }
 
-    // Optionally, display a message or handle the empty state
-    console.log("History cleared.");
+    document.getElementById("cleared").innerText = "*History Cleared*";
+    
+    setTimeout(function() { 
+        document.getElementById("cleared").innerText = ""; 
+    }, 2000); 
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -122,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
             addTask();
         }
     });
-    // loadTasks(); // Comment out or remove this line
+    
 });
 
 let docTitle = document.title;
