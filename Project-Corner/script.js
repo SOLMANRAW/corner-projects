@@ -27,6 +27,16 @@ function addTask(){
     } else {
         taskList.appendChild(newTask);
     }
+    if (reminderTime) {
+        var reminderDate = new Date(reminderTime);
+        var now = new Date();
+        var timeout = reminderDate.getTime() - now.getTime();
+        if (timeout > 0) {
+            setTimeout(function() {
+                alert("Reminder: " + taskText);
+            }, timeout);
+        }
+    }
 
     // Save tasks to local storage
     saveTasks();
