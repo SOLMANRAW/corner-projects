@@ -72,9 +72,7 @@ function loadTasksForHistory() {
     }
     
 }
-document.addEventListener("DOMContentLoaded", function() {
-    loadTasksForHistory();
-});
+
 
 function delete_task(element){
     var taskItem = element.parentElement;
