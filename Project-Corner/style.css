@@ -9,7 +9,7 @@ body {
 #overlay {
   position: fixed;
   top: -50px;
-  left: -240px;
+  left: -280px;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.677); /* Black with 50% opacity */
