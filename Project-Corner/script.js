@@ -2,8 +2,11 @@ document.getElementById("goToHistory").addEventListener("click", function () {
  
     // Show the loading element
     document.getElementById("loader").style.display = "block";
-    document.getElementById("loader").style.zIndex = "100000";
+    document.getElementById("loader").style.zIndex = "1000000000";
     document.getElementById("loader").style.position = "fixed";
+    leftMenu.style.left = '-255px';
+    isMenuOpen = false;
+    document.getElementById("menuButton").style.display = "none";
     // Simulate a delay before navigation to show the loading indicator
     setTimeout(function () {
       // Navigate to history.html
@@ -150,4 +153,27 @@ document.getElementById("goToHistory").addEventListener("click", function () {
   
   
   
+  const menuButton = document.getElementById('menuButton');
+  const leftMenu = document.getElementById('leftMenu');
+  const closeButton = document.getElementById('closeButton');
+  let isMenuOpen = false;
   
+  menuButton.addEventListener('click', function() {
+    if (!isMenuOpen) {
+      leftMenu.style.left = '0';
+      isMenuOpen = true;
+      leftMenu.style.zIndex = '1000000';
+    } else {
+      leftMenu.style.left = '-255px';
+      isMenuOpen = false;
+    }
+  });
+
+  closeButton.addEventListener('click', function() {
+    leftMenu.style.left = '-255px';
+    isMenuOpen = false;
+  });
+
+  document.getElementById("contactlist").addEventListener('click', function(){
+    document.getElementById("cont").style.display = "inline";
+  })

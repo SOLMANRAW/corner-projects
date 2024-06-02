@@ -27,7 +27,7 @@ body {
   height: 112px;
   left: 400px !important;
   position: fixed !important;
-  z-index: 1000000000 !important;
+  z-index: 10000000001000000 !important;
   
 }
 
@@ -1062,3 +1062,81 @@ td {
 
 
 /*Query end*/
+
+
+#leftMenu {
+  position: fixed;
+  top: 0;
+  left: -255px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  transition: left 0.3s;
+  backdrop-filter: blur(10px);
+  border-right: 5px solid blue;
+}
+
+#leftMenu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#leftMenu li {
+  color: white;
+  padding: 10px;
+}
+
+#menuButton {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  font-size: 40px;
+  cursor: pointer;
+  background: rgb(173, 173, 187);
+  border-radius: 10px;
+  color: white;
+  backdrop-filter: blur(10px);
+  background: transparent;
+  border: none;
+  z-index: 1000;
+}
+#closeButton {
+position: absolute;
+top: 10px;
+right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  background: rgb(173, 173, 187);
+  border-radius: 10px;
+  color: white;
+  backdrop-filter: blur(10px);
+  background: transparent;
+  border: none;
+}
+
+.menulist {
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  margin-top: 40px;
+  backdrop-filter: blur(10px);
+}
+.menulist > div {
+  padding: 30px 30px;
+  text-align: left;
+  top: 40px;
+  color: white;
+  font-size: 20px;
+  backdrop-filter: blur(10px);
+  
+}
+
+.menulist > div:hover {
+  background: linear-gradient(to right, blue, white);
+  border-radius: 5px;
+  
+}
+
+#cont {
+  display: none;
+  left: 10px;
+}
