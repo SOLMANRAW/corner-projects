@@ -172,6 +172,8 @@ document.getElementById("goToHistory").addEventListener("click", function () {
   closeButton.addEventListener('click', function() {
     leftMenu.style.left = '-255px';
     isMenuOpen = false;
+    document.getElementById("cont").style.display = "none";
+
   });
 
   document.getElementById("contactlist").addEventListener('click', function(){

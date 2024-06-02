@@ -821,7 +821,7 @@ td {
   display: none;
   max-width: 115px;
   margin-inline: auto;
-  margin-top: -50px !important;
+  margin-top: -40px !important;
   width: 112px;
   height: 112px;
   position: absolute !important;
@@ -1116,14 +1116,14 @@ right: 10px;
 .menulist {
   display: flex;
   flex-direction: column;
-  top: 40px;
-  margin-top: 40px;
+  top: 50px;
+  margin-top: 50px;
   backdrop-filter: blur(10px);
 }
 .menulist > div {
   padding: 30px 30px;
   text-align: left;
-  top: 40px;
+  top: 50px;
   color: white;
   font-size: 20px;
   backdrop-filter: blur(10px);
@@ -1138,5 +1138,7 @@ right: 10px;
 
 #cont {
   display: none;
-  left: 10px;
+  position: relative;
+  left: 70px;
+  transition: 0.3s;
 }
