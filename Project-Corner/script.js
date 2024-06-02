@@ -1,20 +1,19 @@
 document.getElementById("goToHistory").addEventListener("click", function () {
  
-    // Show the loading element
     document.getElementById("loader").style.display = "block";
     document.getElementById("loader").style.zIndex = "1000000000";
     document.getElementById("loader").style.position = "fixed";
     leftMenu.style.left = '-255px';
     isMenuOpen = false;
     document.getElementById("menuButton").style.display = "none";
-    // Simulate a delay before navigation to show the loading indicator
     setTimeout(function () {
-      // Navigate to history.html
       window.location.href = "history.html";
-    }, 5000); // Adjust delay as needed
+    }, 5000); 
     document.getElementById("overlay").style.display = "block";
     document.body.style.overflow = "hidden";
   });
+
+
   
 
   function addTask() {
@@ -176,6 +175,15 @@ document.getElementById("goToHistory").addEventListener("click", function () {
 
   });
 
-  document.getElementById("contactlist").addEventListener('click', function(){
-    document.getElementById("cont").style.display = "inline";
-  })
+  let contactClicked = false;
+  const contactElement = document.getElementById('contactlist');
+  const contElement = document.getElementById('cont');
+
+  contactElement.addEventListener('click', function() {
+    if (contactClicked) {
+        contElement.style.display = 'none'; 
+    } else {
+        contElement.style.display = 'block'; 
+    }
+    contactClicked = !contactClicked; 
+  });

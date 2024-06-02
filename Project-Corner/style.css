@@ -12,9 +12,9 @@ body {
   left: -278px;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.677); /* Black with 50% opacity */
-  z-index: 999999 !important; /* Ensure it's above other elements */
-  display: none; /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.677); 
+  z-index: 999999 !important; 
+  display: none; 
 }
 
 /* loading style */
@@ -1067,7 +1067,7 @@ td {
 #leftMenu {
   position: fixed;
   top: 0;
-  left: -255px; /* Initially hidden */
+  left: -255px; 
   width: 250px;
   height: 100%;
   transition: left 0.3s;
