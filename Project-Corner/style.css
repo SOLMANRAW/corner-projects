@@ -1086,7 +1086,7 @@ td {
 }
 
 #menuButton {
-  position: fixed;
+  position: relative;
   top: 20px;
   left: 30px;
   font-size: 40px;
