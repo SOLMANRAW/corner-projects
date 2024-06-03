@@ -1,22 +1,4 @@
-document.getElementById("goToHistory").addEventListener("click", function () {
- 
-    document.getElementById("loader").style.display = "block";
-    document.getElementById("loader").style.zIndex = "1000000000";
-    document.getElementById("loader").style.position = "fixed";
-    leftMenu.style.left = '-255px';
-    isMenuOpen = false;
-    document.getElementById("menuButton").style.display = "none";
-    setTimeout(function () {
-      window.location.href = "history.html";
-    }, 5000); 
-    document.getElementById("overlay").style.display = "block";
-    document.body.style.overflow = "hidden";
-  });
-
-
-  
-
-  function addTask() {
+function addTask() {
     var taskInput = document.getElementById("taskInput");
     var taskText = taskInput.value.trim();
     var reminderTime = document.getElementById("reminderInput").value;
@@ -69,6 +51,22 @@ document.getElementById("goToHistory").addEventListener("click", function () {
     taskInput.value = "";
     document.getElementById("reminderInput").value = "";
   }
+
+  function delete_task(element) {
+    var taskItem = element.parentElement;
+    if (element.classList.contains("done-button")) {
+      taskItem.classList.add("move-left");
+      taskItem.style.backgroundColor = " rgb(12, 239, 35)";
+      taskItem.innerText = "";
+    } else if (element.classList.contains("delete-button")) {
+      taskItem.classList.add("move-right");
+      taskItem.style.backgroundColor = "rgb(250, 8, 8)";
+      taskItem.innerText = "";
+    }
+    taskItem.addEventListener("transitionend", function () {
+      taskItem.remove();
+    });
+  }
   
   function saveTasks() {
     var tasks = [];
@@ -101,22 +99,6 @@ document.getElementById("goToHistory").addEventListener("click", function () {
     }
   }
   
-  function delete_task(element) {
-    var taskItem = element.parentElement;
-    if (element.classList.contains("done-button")) {
-      taskItem.classList.add("move-left");
-      taskItem.style.backgroundColor = " rgb(12, 239, 35)";
-      taskItem.innerText = "";
-    } else if (element.classList.contains("delete-button")) {
-      taskItem.classList.add("move-right");
-      taskItem.style.backgroundColor = "rgb(250, 8, 8)";
-      taskItem.innerText = "";
-    }
-    taskItem.addEventListener("transitionend", function () {
-      taskItem.remove();
-    });
-  }
-  
   function clearHistory() {
     localStorage.removeItem("tasks");
   
@@ -131,26 +113,6 @@ document.getElementById("goToHistory").addEventListener("click", function () {
       document.getElementById("cleared").innerText = "";
     }, 2000);
   }
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    var taskInput = document.getElementById("taskInput");
-    taskInput.addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        addTask();
-      }
-    });
-  });
-  
-  let docTitle = document.title;
-  window.addEventListener("blur", () => {
-    document.title = "Please come back🥺";
-  });
-  window.addEventListener("focus", () => {
-    document.title = docTitle;
-  });
-  
-  
   
   const menuButton = document.getElementById('menuButton');
   const leftMenu = document.getElementById('leftMenu');
@@ -186,4 +148,37 @@ document.getElementById("goToHistory").addEventListener("click", function () {
         contElement.style.display = 'block'; 
     }
     contactClicked = !contactClicked; 
+  });
+
+  document.getElementById("goToHistory").addEventListener("click", function () {
+ 
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("loader").style.zIndex = "1000000000";
+    document.getElementById("loader").style.position = "fixed";
+    leftMenu.style.left = '-255px';
+    isMenuOpen = false;
+    document.getElementById("menuButton").style.display = "none";
+    setTimeout(function () {
+      window.location.href = "history.html";
+    }, 5000); 
+    document.getElementById("overlay").style.display = "block";
+    document.body.style.overflow = "hidden";
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var taskInput = document.getElementById("taskInput");
+    taskInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addTask();
+      }
+    });
+  });
+
+  let docTitle = document.title;
+  window.addEventListener("blur", () => {
+    document.title = "Please come back🥺";
+  });
+  window.addEventListener("focus", () => {
+    document.title = docTitle;
   });
