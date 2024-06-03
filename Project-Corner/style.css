@@ -305,7 +305,7 @@ body {
   min-height: 1000px;
   margin: 50px auto;
   padding: 20px;
-  border: 3px solid #076585;
+  border: 5px solid #07c1ff;
   border-radius: 30px;
   backdrop-filter: blur(10px);
 }
@@ -519,75 +519,55 @@ li {
 /*telegram button*/
 button.b1 {
   position: relative;
-  width: 165px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: rgb(105, 180, 249);
   border: 1px #08c solid;
   overflow: hidden;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  background-color: #29a1ec;
+  transition: 1s;
+  border: none;
+  width: 51px;
+  height: 50px;
 }
-
-.text1 {
-  position: relative;
-  font-size: 20px;
-  font-weight: 700;
-  margin-left: 22%;
-  top: 5%;
-  color: #fffdfd;
-  text-align: center;
+.b1:hover{
+  width: 160px;
 }
-
 .text2 {
   position: absolute;
   top: 30%;
   left: -100px;
   font-weight: 700;
   font-size: 18px;
-  color: rgb(25, 141, 212);
+  color: rgb(239, 243, 246);
   text-decoration: none;
+  z-index: 3;
+  transition: 1s;
 }
-
 .icon {
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.5s;
-  width: 50px;
+  width: 51px;
   height: 50px;
+  z-index: 5;
+  
 }
-
-.icon::before {
-  position: absolute;
-  left: -100px;
-  top: 0;
-  z-index: -1;
-  content: "";
-  width: 130px;
-  height: 33px;
-  border-radius: 30px;
-  background-color: #08c;
-}
-
-button:hover .text2 {
+button.b1:hover .text2 {
   transform: translateX(151px);
-  transition: transform 0.6s;
-}
-
-button:hover .text1 {
-  transform: translateX();
-  font-size: 0px;
-}
-
-button:active {
-  transform: scale(1.03);
 }
 
 /*instagram button*/
 button.b2 {
   position: relative;
-  width: 165px;
+  width: 51px;
   height: 50px;
-  border-radius: 30px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
   background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
@@ -596,19 +576,10 @@ button.b2 {
     #d6249f 60%,
     #285aeb 90%
   );
-  border: 2px orangered solid;
+  border: 1px orangered solid;
+  transition: 1s;
   overflow: hidden;
 }
-
-.text11 {
-  position: absolute;
-  font-size: 20px;
-  font-weight: 600;
-  margin-left: -29px;
-  top: 30%;
-  color: #fffdfd;
-}
-
 .text22 {
   position: absolute;
   top: 30%;
@@ -617,94 +588,62 @@ button.b2 {
   font-size: 18px;
   color: rgb(90, 3, 87);
   text-decoration: none;
+  z-index: 3;
+  transition: 1s;
 }
 
 .icon2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50px;
+  width: 51px;
   height: 50px;
+  z-index: 5;
 }
-
+.b2:hover{
+  width: 160px;
+}
 button:hover .text22 {
   transform: translateX(151px);
-  transition: transform 0.6s;
-}
-
-button:active {
-  transform: scale(1.03);
-}
-
-button:hover .text11 {
-  transform: translateX();
-  font-size: 0px;
 }
 
 /*facebook button*/
 button.b3 {
   position: relative;
-  width: 168px;
+  width: 51px;
   height: 50px;
   border-radius: 30px;
   background-color: rgb(51, 56, 151);
   border: 1px #3a5ba2 solid;
   overflow: hidden;
   margin-right: 5px;
+  transition: 1s;
 }
-
-.text111 {
-  position: absolute;
-  font-size: 20px;
-  font-weight: 600;
-  margin-left: -15%;
-  margin-top: -10px;
-  color: #fffdfd;
-}
-
 .text222 {
   position: absolute;
   top: 30%;
   left: -100px;
   font-weight: 700;
   font-size: 18px;
-  color: rgb(63, 6, 250);
+  color: rgb(255, 255, 255);
   text-decoration: none;
+  z-index: 3;
+  transition: 1s;
 }
-
 .icon3 {
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.5s;
-  width: 50px;
+  width: 51px;
   height: 50px;
+  z-index: 5;
 }
-
-.icon3::before {
-  position: absolute;
-  left: -100px;
-  top: 0;
-  z-index: -1;
-  content: "";
-  width: 130px;
-  height: 33px;
-  border-radius: 30px;
-  background-color: #3a5ba2;
+.b3:hover{
+  width: 160px;
 }
-
 button:hover .text222 {
   transform: translateX(151px);
-  transition: transform 0.6s;
-}
-
-button:active {
-  transform: scale(1.03);
-}
-
-button:hover .text111 {
-  transform: translateX();
-  font-size: 0px;
 }
 
 .contact {
@@ -1081,6 +1020,14 @@ td {
 
 /*Query end*/
 
+hr {
+  width: 247px;
+  font-size: 5px;
+  color: #07c1ff;
+  background-color: #07c1ff;
+  height: 5px;
+  border: none;
+}
 
 #leftMenu {
   position: fixed;
@@ -1090,7 +1037,7 @@ td {
   height: 100%;
   transition: left 0.3s;
   backdrop-filter: blur(10px);
-  border-right: 5px solid #076585;
+  border-right: 5px solid #07c1ff;
 }
 
 #leftMenu ul {
