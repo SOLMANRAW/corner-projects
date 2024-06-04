@@ -8,7 +8,7 @@ body {
 }
 #overlay {
   position: fixed;
-  top: -50px;
+  top: -90px;
   left: -278px;
   width: 100vw;
   height: 100vh;
